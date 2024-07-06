@@ -21,8 +21,3 @@ Antes de começar, certifique-se de ter os seguintes softwares instalados:
     ```sh
     npm install
     ```
-    or 
-    ```sh
-    yarn install
-    ```
-    
