@@ -13,5 +13,12 @@ describe('As a Customer, we want to see if the second item from the second resul
       .contains('a', '2')
       .scrollIntoView()
       .click();
+
+    // check if is on the 2nd page
+    cy.url().should('include', 'page=2');
+    
+    // Click on the second item - removing attr to avoid opening a new tab(we know that Cypress doesn't handle new tabs well)
+    cy.get(secondPageEl.secondProduct).eq(1).invoke("removeAttr", "target").click()
+      
   })
 })
