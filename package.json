@@ -4,7 +4,8 @@
   "description": "Test automation of Aliexpress flow. It should be evaluated by the Modak team.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "npx cypress open --e2e -b chrome",
+    "cypress:headed": "npx cypress run --headed -b chrome -s cypress/e2e/spec.cy.js"
   },
   "author": "João Lucas",
   "license": "ISC",
