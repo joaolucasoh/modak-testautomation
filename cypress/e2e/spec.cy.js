@@ -19,6 +19,9 @@ describe('As a Customer, we want to see if the second item from the second resul
     
     // Click on the second item - removing attr to avoid opening a new tab(we know that Cypress doesn't handle new tabs well)
     cy.get(secondPageEl.secondProduct).eq(1).invoke("removeAttr", "target").click()
-      
+
+    // Check whether the buttons exists
+    cy.get(secondPageEl.buyItNowButton).should('exist')
+    cy.get(secondPageEl.addToCartButton).should('exist')
   })
 })
